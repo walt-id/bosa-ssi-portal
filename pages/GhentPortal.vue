@@ -29,7 +29,7 @@
   </div>
 </section>
 </template>
-	
+
 <script>
 import QRious from "qrious"
 export default {
@@ -40,7 +40,7 @@ export default {
   }},
 	async asyncData ({ $axios, query, $auth }) {
     console.log($auth.user.id)
-    const citizen = await $axios.$get("/ghent/portal/citizen/"+$auth.user.id)
+    const citizen = await $axios.$get("/bosa/portal/citizen/"+$auth.user.id)
     return { citizen }
   },
   computed: {
@@ -54,13 +54,13 @@ export default {
       console.log("Citizen data:", this.citizen)
       const params = { "walletId": walletId, "isPreAuthorized": true, "userPin": null }
       if(walletId != "x-device") {
-        window.location = `/ghent/portal/issue/${this.personalID}/${type}?${Object.keys(params)
+        window.location = `/bosa/portal/issue/${this.personalID}/${type}?${Object.keys(params)
           .filter(k => params[k] != null)
           .map(k => `${k}=${params[k]}`).join("&")}`
       } else {
         this.btnLoading = false;
         this.$bvModal.show("qr-modal")
-        this.walletUrl = await this.$axios.$get(`/ghent/portal/issue/${this.personalID}/${type}`, { params: params })
+        this.walletUrl = await this.$axios.$get(`/bosa/portal/issue/${this.personalID}/${type}`, { params: params })
         new QRious({
         element: document.getElementById('qr-code'),
           value: this.walletUrl,
@@ -71,7 +71,7 @@ export default {
   }
 }
 </script>
-	
+
 <style scoped>
-	
+
 </style>

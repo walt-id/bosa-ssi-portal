@@ -7,19 +7,19 @@
       <div class="py-2"><b>Present with:</b></div>
       <div class="text-center small">
         <a :href="xDeviceInfo.url"><i class="bi bi-app-indicator px-2"></i>{{$t('WALLET_APP')}}</a><br/>
-        <a  :href="'/ghent/portal/authorize?webUrl='+webUrl"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
+        <a  :href="'/bosa/portal/authorize?webUrl='+webUrl"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
       </div>
     </div>
   </div>
 </section>
 </template>
-	
+
 <script>
 import QRious from "qrious"
 export default {
   data() {
     return {
-     
+
     }
   },
   computed: {
@@ -28,7 +28,7 @@ export default {
     }
   },
   async asyncData ({ $axios, query }) {
-    const xDeviceInfo = await $axios.$get("/ghent/portal/authorize/xdevice")
+    const xDeviceInfo = await $axios.$get("/bosa/portal/authorize/xdevice")
     return { xDeviceInfo }
   },
 	mounted() {
@@ -39,7 +39,7 @@ export default {
         size: 400
       })
     setInterval(async () => {
-      const verificationResult = await this.$axios.$get("/ghent/portal/authorize/isVerified?state="+this.xDeviceInfo.state)
+      const verificationResult = await this.$axios.$get("/bosa/portal/authorize/isVerified?state="+this.xDeviceInfo.state)
       console.log("Verification result", verificationResult)
       if(verificationResult.verified) {
         window.location = verificationResult.url
@@ -48,7 +48,7 @@ export default {
   }
 }
 </script>
-	
+
 <style scoped>
-	
+
 </style>

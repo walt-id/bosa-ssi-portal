@@ -9,7 +9,7 @@
                 About BOSA
               </h4>
               <p class="text-muted">
-                <b>Ghent Citizen Portal</b> is a portal for citizens to retrieve their digital identity and energy credentials into their SSI wallets.
+                <b>BOSA Portal</b> is a portal for citizens to retrieve their digital identity and energy credentials into their SSI wallets.
               </p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">

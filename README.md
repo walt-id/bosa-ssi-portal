@@ -29,7 +29,7 @@ For detailed explanation on how things work, check out the [documentation](https
 ---
 **List current citizens in in-memory database:**
 
-https://bosa.walt-test.cloud/ghent/citizens/list
+https://bosa.walt-test.cloud/bosa/citizens/list
 
 ---
 
@@ -37,7 +37,7 @@ https://bosa.walt-test.cloud/ghent/citizens/list
 * Populate data in ghent-citizens.json
 * POST data using curl:
 
-`curl -X POST https://bosa.walt-test.cloud/ghent/citizens/put -d @ghent-citizens.json`
+`curl -X POST https://bosa.walt-test.cloud/bosa/citizens/put -d @ghent-citizens.json`
 
 **Frontend**
 
@@ -48,7 +48,7 @@ proxy: {
     '/issuer-api/': 'https://wallet.walt-test.cloud',
     '/onboarding-api/': 'https://wallet.walt-test.cloud',
     '/api/': 'https://wallet.walt-test.cloud',
-    '/ghent/': 'https://integrations.walt-test.cloud'
+    '/bosa/': 'https://integrations.walt-test.cloud'
   }
 ```
 * Build:
