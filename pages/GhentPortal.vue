@@ -15,6 +15,24 @@
     <div>
       <button @click="goToWallet('x-device', 'ProofOfResidence')" class="btn btn-primary py-2 px-5">Issue <b>Proof of residence</b> credential</button>
     </div>
+    <div>
+      <button @click="goToWallet('x-device', 'BosaFamilyComposition')" class="btn btn-primary py-2 px-5">Issue <b>Family Composition</b> credential</button>
+    </div>
+    <div>
+      <button @click="goToWallet('x-device', 'BosaMartialStatus')" class="btn btn-primary py-2 px-5">Issue <b>Martial Status</b> credential</button>
+    </div>
+    <div>
+      <button @click="goToWallet('x-device', 'BosaSatutoryCohabitation')" class="btn btn-primary py-2 px-5">Issue <b>Satutory Cohabitation</b> credential</button>
+    </div>
+    <div>
+      <button @click="goToWallet('x-device', 'FodEcoProtectedCustomer')" class="btn btn-primary py-2 px-5">Issue <b>Fod Eco Protected Customer</b> credential</button>
+    </div>
+    <div>
+      <button @click="goToWallet('x-device', 'FodFinCombinedTaxableIncome')" class="btn btn-primary py-2 px-5">Issue <b>Fod Fin Combined Taxable Income</b> credential</button>
+    </div>
+    <div>
+      <button @click="goToWallet('x-device', 'GaapdStatusOfProperty')" class="btn btn-primary py-2 px-5">Issue <b>Gaapd Status of Property</b> credential</button>
+    </div>
     <b-modal id="qr-modal" :static="true" centered>
       <div><b>{{$t('SCAN_TO_ISSUE')}}:</b></div>
       <div class="text-center" :v-show="qr-code-visible">
@@ -22,7 +40,7 @@
         <div class="py-2"><b>{{$t('ISSUE_TO')}}:</b></div>
         <div class="text-center small">
           <a :href="walletUrl"><i class="bi bi-app-indicator px-2"></i>{{$t('WALLET_APP')}}</a><br/>
-          <a @click="goToWallet('walt.id', 'ProofOfResidence')" href="#"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
+          <a @click="goToWallet('walt.id', credentialType)" href="#"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
         </div>
       </div>
     </b-modal>
@@ -36,7 +54,8 @@ export default {
   name: 'GhentPortal',
   middleware: [ 'portal-login', 'auth' ],
   data() { return {
-    walletUrl: null
+    walletUrl: null,
+    credentialType: null
   }},
 	async asyncData ({ $axios, query, $auth }) {
     console.log($auth.user.id)
@@ -58,6 +77,7 @@ export default {
           .filter(k => params[k] != null)
           .map(k => `${k}=${params[k]}`).join("&")}`
       } else {
+        this.credentialType = type;
         this.btnLoading = false;
         this.$bvModal.show("qr-modal")
         this.walletUrl = await this.$axios.$get(`/bosa/portal/issue/${this.personalID}/${type}`, { params: params })
