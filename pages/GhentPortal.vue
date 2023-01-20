@@ -1,3 +1,11 @@
+<style scoped>
+.bosaButton {
+  width:75%;
+  padding: 8px;
+  margin: 5px;
+}
+</style>
+
 <template>
 <section class="py-5 text-center container">
   <div>
@@ -13,25 +21,29 @@
             </table>
     </p>
     <div>
-      <button @click="goToWallet('x-device', 'ProofOfResidence')" class="btn btn-primary py-2 px-5">Issue <b>Proof of residence</b> credential</button>
-    </div>
-    <div>
-      <button @click="goToWallet('x-device', 'BosaFamilyComposition')" class="btn btn-primary py-2 px-5">Issue <b>Family Composition</b> credential</button>
-    </div>
-    <div>
-      <button @click="goToWallet('x-device', 'BosaMartialStatus')" class="btn btn-primary py-2 px-5">Issue <b>Martial Status</b> credential</button>
-    </div>
-    <div>
-      <button @click="goToWallet('x-device', 'BosaSatutoryCohabitation')" class="btn btn-primary py-2 px-5">Issue <b>Satutory Cohabitation</b> credential</button>
-    </div>
-    <div>
-      <button @click="goToWallet('x-device', 'FodEcoProtectedCustomer')" class="btn btn-primary py-2 px-5">Issue <b>Fod Eco Protected Customer</b> credential</button>
-    </div>
-    <div>
-      <button @click="goToWallet('x-device', 'FodFinCombinedTaxableIncome')" class="btn btn-primary py-2 px-5">Issue <b>Fod Fin Combined Taxable Income</b> credential</button>
-    </div>
-    <div>
-      <button @click="goToWallet('x-device', 'GaapdStatusOfProperty')" class="btn btn-primary py-2 px-5">Issue <b>Gaapd Status of Property</b> credential</button>
+      <div>
+        <div>
+          <button @click="goToWallet('x-device', 'ProofOfResidence')" class="btn btn-primary bosaButton">Issue <b>Proof of residence</b> credential</button>
+        </div>
+        <div>
+          <button @click="goToWallet('x-device', 'BosaFamilyComposition')" class="btn btn-primary bosaButton">Issue <b>Family Composition</b> credential</button>
+        </div>
+        <div>
+          <button @click="goToWallet('x-device', 'BosaMartialStatus')" class="btn btn-primary bosaButton">Issue <b>Martial Status</b> credential</button>
+        </div>
+        <div>
+          <button @click="goToWallet('x-device', 'BosaSatutoryCohabitation')" class="btn btn-primary bosaButton">Issue <b>Satutory Cohabitation</b> credential</button>
+        </div>
+        <div>
+          <button @click="goToWallet('x-device', 'FodEcoProtectedCustomer')" class="btn btn-primary bosaButton">Issue <b>Fod Eco Protected Customer</b> credential</button>
+        </div>
+        <div>
+          <button @click="goToWallet('x-device', 'FodFinCombinedTaxableIncome')" class="btn btn-primary bosaButton">Issue <b>Fod Fin Combined Taxable Income</b> credential</button>
+        </div>
+        <div>
+          <button @click="goToWallet('x-device', 'GaapdStatusOfProperty')" class="btn btn-primary bosaButton">Issue <b>Gaapd Status of Property</b> credential</button>
+        </div>
+      </div>
     </div>
     <b-modal id="qr-modal" :static="true" centered>
       <div><b>{{$t('SCAN_TO_ISSUE')}}:</b></div>
