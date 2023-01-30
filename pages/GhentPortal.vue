@@ -29,10 +29,10 @@
           <button @click="goToWallet('x-device', 'BosaFamilyComposition')" class="btn btn-primary bosaButton">Issue <b>Family Composition</b> credential</button>
         </div>
         <div>
-          <button @click="goToWallet('x-device', 'BosaMartialStatus')" class="btn btn-primary bosaButton">Issue <b>Martial Status</b> credential</button>
+          <button @click="goToWallet('x-device', 'BosaMaritalStatus')" class="btn btn-primary bosaButton">Issue <b>Marital Status</b> credential</button>
         </div>
         <div>
-          <button @click="goToWallet('x-device', 'BosaSatutoryCohabitation')" class="btn btn-primary bosaButton">Issue <b>Satutory Cohabitation</b> credential</button>
+          <button @click="goToWallet('x-device', 'BosaStatutoryCohabitation')" class="btn btn-primary bosaButton">Issue <b>Statutory Cohabitation</b> credential</button>
         </div>
         <div>
           <button @click="goToWallet('x-device', 'FodEcoProtectedCustomer')" class="btn btn-primary bosaButton">Issue <b>Fod Eco Protected Customer</b> credential</button>
