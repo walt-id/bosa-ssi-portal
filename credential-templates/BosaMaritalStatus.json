@@ -6,12 +6,12 @@
   },
   "credentialSubject": {
     "id": "did:key:z6MkjnxJaPyKLmWD34VL5oRnKtCWPSuik3EvruycPpzs3yvR",
-    "satutoryCohabitation" : true
+    "familyComposition" : "male"
   },
   "id": "urn:uuid:3add94f4-28ec-42a1-8704-4e4aa51006b4",
   "issued": "2021-08-31T00:00:00Z",
   "issuer": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN",
   "validFrom": "2021-08-31T00:00:00Z",
   "issuanceDate": "2021-08-31T00:00:00Z",
-  "type": ["VerifiableCredential", "VerifiableAttestation", "BosaSatutoryCohabitation"]
+  "type": ["VerifiableCredential", "VerifiableAttestation", "BosaMaritalStatus"]
 }
