@@ -9,12 +9,12 @@
 <template>
 <section class="py-5 text-center container">
   <div>
-    <h1>Welcome to Ghent Portal</h1>
+    <h1>Welcome to BOSA SSI Portal</h1>
     <p>
       <table class="table">
               <tbody>
                 <tr v-for="(value, key) in citizen" :key="key">
-                  <th scope="row">{{$t("GHENT_PORTAL.CITIZEN." + key)}}</th>
+                  <th scope="row">{{$t("BOSA_PORTAL.CITIZEN." + key)}}</th>
                   <td>{{value}}</td>
                 </tr>
               </tbody>
@@ -52,7 +52,7 @@
         <div class="py-2"><b>{{$t('ISSUE_TO')}}:</b></div>
         <div class="text-center small">
           <a :href="walletUrl"><i class="bi bi-app-indicator px-2"></i>{{$t('WALLET_APP')}}</a><br/>
-          <a @click="goToWallet('walt.id', credentialType)" href="#"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
+          <a @click="goToWallet('walt.id', credentialType)" href="#"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("BOSA_PORTAL.WEB_WALLET")}}</span></a>
         </div>
       </div>
     </b-modal>

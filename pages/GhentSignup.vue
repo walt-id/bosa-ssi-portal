@@ -4,19 +4,19 @@
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="fw-normal">
-            {{$t('GHENT_PORTAL.SIGNUP.CLAIM_VERIFIABLE_ID')}}
+            {{$t('BOSA_PORTAL.SIGNUP.CLAIM_VERIFIABLE_ID')}}
           </h1>
           <div v-if="!citizenData">
-            <span>{{$t("GHENT_PORTAL.SIGNUP.ENTER_PERSONAL_ID")}}</span>
-            <input type="text" class="form-control border-primary mb-2 w-50 mx-auto" :placeholder="$t('GHENT_PORTAL.CITIZEN.personalIdentifier')" aria-label="PersonalID" v-model="personalID" />
+            <span>{{$t("BOSA_PORTAL.SIGNUP.ENTER_PERSONAL_ID")}}</span>
+            <input type="text" class="form-control border-primary mb-2 w-50 mx-auto" :placeholder="$t('BOSA_PORTAL.CITIZEN.personalIdentifier')" aria-label="PersonalID" v-model="personalID" />
             <button @click="initCitizenSignup" class="btn btn-primary py-2 px-5" :disabled="!personalID">{{$t("CONFIRM")}}</button>
           </div>
           <div v-if="citizenData">
-            <b>{{$t("GHENT_PORTAL.SIGNUP.CITIZEN_DATA")}}:</b>
+            <b>{{$t("BOSA_PORTAL.SIGNUP.CITIZEN_DATA")}}:</b>
             <table class="table">
               <tbody>
                 <tr v-for="(value, key) in citizenData" :key="key">
-                  <th scope="row">{{$t("GHENT_PORTAL.CITIZEN." + key)}}</th>
+                  <th scope="row">{{$t("BOSA_PORTAL.CITIZEN." + key)}}</th>
                   <td>{{value}}</td>
                 </tr>
               </tbody>
@@ -37,7 +37,7 @@
             <div class="py-2"><b>{{$t('ISSUE_TO')}}:</b></div>
             <div class="text-center small">
               <a :href="walletUrl" :disabled="!canSubmit"><i class="bi bi-app-indicator px-2"></i>{{$t('WALLET_APP')}}</a><br/>
-              <a @click="goToWallet('walt.id')" href="#" :disabled="!canSubmit"><img v-if="btnLoading" src="loader.gif" width="20px"/><span v-else><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
+              <a @click="goToWallet('walt.id')" href="#" :disabled="!canSubmit"><img v-if="btnLoading" src="loader.gif" width="20px"/><span v-else><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("BOSA_PORTAL.WEB_WALLET")}}</span></a>
             </div>
           </div>
         </b-modal>

@@ -135,7 +135,7 @@ export default {
         ACHIEVMENT_CRITERIA_narrative:"Criteria narrative"
 
     },
-    GHENT_PORTAL: {
+    BOSA_PORTAL: {
         WELCOME: "Welcome to BOSA",
         CHOOSE_ACTION: "Where do you want to go?",
         SIGNUP: {
