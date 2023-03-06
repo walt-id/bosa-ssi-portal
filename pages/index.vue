@@ -12,10 +12,10 @@
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="fw-normal">
-            {{ $t("GHENT_PORTAL.WELCOME") }}
+            {{ $t("BOSA_PORTAL.WELCOME") }}
           </h1>
           <p class="lead text-muted fw-normal mb-4">
-            {{ $t("GHENT_PORTAL.CHOOSE_ACTION") }}
+            {{ $t("BOSA_PORTAL.CHOOSE_ACTION") }}
           </p>
           <div>
             <div>

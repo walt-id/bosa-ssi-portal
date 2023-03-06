@@ -7,7 +7,7 @@
       <div class="py-2"><b>Present with:</b></div>
       <div class="text-center small">
         <a :href="xDeviceInfo.url"><i class="bi bi-app-indicator px-2"></i>{{$t('WALLET_APP')}}</a><br/>
-        <a  :href="'/bosa/portal/authorize?webUrl='+webUrl"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("GHENT_PORTAL.WEB_WALLET")}}</span></a>
+        <a  :href="'/bosa/portal/authorize?webUrl='+webUrl"><span><i class="bi bi-box-arrow-up-right px-2"></i>{{$t("BOSA_PORTAL.WEB_WALLET")}}</span></a>
       </div>
     </div>
   </div>
