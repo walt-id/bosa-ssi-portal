@@ -1,0 +1,14 @@
+{
+  "type": [
+    "VerifiableCredential",
+    "EnergyLoan"
+  ],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "credentialSubject": {},
+  "issuer": {
+    "id": "did:key:z6MkrHKzgsahxBLyNAbLQyB1pcWNYC9GmywiWPgkrvntAZcj",
+    "name": "Stad Gent"
+  }
+}
