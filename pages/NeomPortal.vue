@@ -9,7 +9,7 @@
 <template>
 <section class="py-5 text-center container">
   <div>
-    <h1>Welcome to BOSA SSI Portal</h1>
+    <h1>Welcome to NEOM SSI Portal</h1>
     <p>
       <table class="table">
               <tbody>
@@ -63,7 +63,7 @@
 <script>
 import QRious from "qrious"
 export default {
-  name: 'GhentPortal',
+  name: 'NeomPortal',
   middleware: [ 'portal-login', 'auth' ],
   data() { return {
     walletUrl: null,

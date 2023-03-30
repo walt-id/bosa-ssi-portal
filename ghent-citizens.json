@@ -1,7 +1,7 @@
 [
   {
     "currentAddress": [
-      "1 Main Street, Ghent"
+      "1 Main Street, Riyadh"
     ],
     "dateOfBirth": "1993-04-08",
     "familyName": "STAMPLER",
@@ -9,11 +9,11 @@
     "gender": "MALE",
     "nameAndFamilyNameAtBirth": "Severin STAMPLER",
     "personalIdentifier": "0904008084H",
-    "placeOfBirth": "GHENT, BELGIUM"
+    "placeOfBirth": "RIYADH, SAUDI ARABIA"
   },
   {
     "currentAddress": [
-      "1 Side Street, Ghent"
+      "1 Side Street, Riyadh"
     ],
     "dateOfBirth": "1993-04-08",
     "familyName": "POTISK",
@@ -21,6 +21,6 @@
     "gender": "MALE",
     "nameAndFamilyNameAtBirth": "Philipp POTISK",
     "personalIdentifier": "123456789P",
-    "placeOfBirth": "GHENT, BELGIUM"
+    "placeOfBirth": "RIYADH, SAUDI ARABIA"
   }
 ]

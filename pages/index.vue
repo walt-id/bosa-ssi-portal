@@ -20,13 +20,13 @@
           <div>
             <div>
               <div>
-                <nuxt-link to="GhentSignup" class="btn btn-primary bosaButton"
+                <nuxt-link to="NeomSignup" class="btn btn-primary bosaButton"
                   >Get your VerifiableId credential</nuxt-link
                 >
               </div>
               <div>
-                <nuxt-link to="GhentPortal" class="btn btn-secondary bosaButton"
-                  >Go to BOSA Portal</nuxt-link
+                <nuxt-link to="NeomPortal" class="btn btn-secondary bosaButton"
+                  >Go to NEOM Portal</nuxt-link
                 >
               </div>
             </div>
