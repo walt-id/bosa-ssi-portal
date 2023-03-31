@@ -6,7 +6,7 @@ export default async function (context) {
             otp: context.route.query.otp
           }
         })
-        console.log("Logged in", loginResponse)
+        console.log("Logged in (portal login) ", loginResponse)
         return await context.$auth.setUser(loginResponse.data)
   }
 }
