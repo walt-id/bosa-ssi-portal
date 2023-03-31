@@ -71,7 +71,7 @@ export default {
   }},
 	async asyncData ({ $axios, query, $auth }) {
     console.log($auth.user.id)
-    const citizen = await $axios.$get("/bosa/portal/citizen/"+$auth.user.id)
+    const citizen = await $axios.$get("/neom/portal/citizen/"+$auth.user.id)
     return { citizen }
   },
   computed: {
@@ -85,14 +85,14 @@ export default {
       console.log("Citizen data:", this.citizen)
       const params = { "walletId": walletId, "isPreAuthorized": true, "userPin": null }
       if(walletId != "x-device") {
-        window.location = `/bosa/portal/issue/${this.personalID}/${type}?${Object.keys(params)
+        window.location = `/neom/portal/issue/${this.personalID}/${type}?${Object.keys(params)
           .filter(k => params[k] != null)
           .map(k => `${k}=${params[k]}`).join("&")}`
       } else {
         this.credentialType = type;
         this.btnLoading = false;
         this.$bvModal.show("qr-modal")
-        this.walletUrl = await this.$axios.$get(`/bosa/portal/issue/${this.personalID}/${type}`, { params: params })
+        this.walletUrl = await this.$axios.$get(`/neom/portal/issue/${this.personalID}/${type}`, { params: params })
         new QRious({
         element: document.getElementById('qr-code'),
           value: this.walletUrl,

@@ -77,13 +77,13 @@ export default {
       console.log("Citizen data:", this.citizenData)
       const params = { "walletId": walletId, "isPreAuthorized": this.preAuthorized, "userPin": this.userPin }
       if(walletId != "x-device") {
-        window.location = `/bosa/signup/issue/${this.personalID}?${Object.keys(params)
+        window.location = `/neom/signup/issue/${this.personalID}?${Object.keys(params)
           .filter(k => params[k] != null)
           .map(k => `${k}=${params[k]}`).join("&")}`
       } else {
         this.btnLoading = false;
         this.$bvModal.show("qr-modal")
-        this.walletUrl = await this.$axios.$get(`/bosa/signup/issue/${this.personalID}`, { params: params })
+        this.walletUrl = await this.$axios.$get(`/neom/signup/issue/${this.personalID}`, { params: params })
         new QRious({
         element: document.getElementById('qr-code'),
           value: this.walletUrl,
@@ -98,7 +98,7 @@ export default {
       }, 2000)
     },
     async initCitizenSignup() {
-      this.citizenData = await this.$axios.$get(`/bosa/signup/${this.personalID}`).catch(reason => {
+      this.citizenData = await this.$axios.$get(`/neom/signup/${this.personalID}`).catch(reason => {
         this.setErrorMsg("Personal identifier invalid")
       })
     }

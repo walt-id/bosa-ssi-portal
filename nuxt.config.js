@@ -59,8 +59,8 @@ export default {
     '/issuer-api/': 'https://wallet.walt-test.cloud',
     '/onboarding-api/': 'https://wallet.walt-test.cloud',
     '/api/': 'https://wallet.walt-test.cloud',
-    //'/bosa/': 'http://localhost:5555'
-    '/bosa/': 'https://bosa.walt-test.cloud'
+    //'/neom/': 'http://localhost:5555'
+    '/neom/': 'https://bosa.walt-test.cloud'
     //'/issuer-api/': 'http://localhost:8080/',
     //'/onboarding-api/': 'http://localhost:8080/',
     //'/api/': 'http://localhost:8080/'
@@ -112,7 +112,7 @@ export default {
         },
         user: false,
         endpoints: {
-          login: { url: '/bosa/portal/authorize/token', method: 'post' },
+          login: { url: '/neom/portal/authorize/token', method: 'post' },
           user: { url: '/api/auth/user', method: 'get' }
         }
       }
